@@ -1,0 +1,63 @@
+.sl-main-container {
+  background-size: 100vw;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  text-emphasis-color: white;
+  color: white;
+  background-image: url("../images/pexels-pixabay-247676.jpg");
+  height: 100vw;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+.sl-home-container {
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+}
+@media only screen and (max-width: 991px) {
+  .sl-home-container {
+    margin-top: 25vw;
+  }
+}
+.sl-mail {
+  color: rgb(226, 187, 12);
+}
+.sl-contact-input {
+  width: 100%;
+  max-width: 40vw;
+  border-style: none;
+  border-width: 1px;
+  border-color: hsla(0, 0%, 100%, 0);
+  border-radius: 10px;
+  padding: 0.5vw;
+  color: #fff;
+  background-color: rgba(27, 27, 27, 0.91);
+}
+.sl-contact-input-text-area {
+  width: 100%;
+  max-width: 40vw;
+  border-style: none;
+  border-width: 1px;
+  border-color: hsla(0, 0%, 100%, 0);
+  border-radius: 10px;
+  padding: 0.5vw;
+  color: #fff;
+  height: auto;
+  background-color: rgba(27, 27, 27, 0.91);
+}
+.sl-form-group {
+  margin: 1vw;
+}
+.sl-form-submit {
+  min-height: 48px;
+  min-width: 118px;
+  margin-top: 10px;
+  border-radius: 12px;
+  color: #f0860c;
+  font-size: 18px;
+  font-weight: 500;
+
+  background-color: rgba(27, 27, 27, 0.91);
+}

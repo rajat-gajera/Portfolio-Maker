@@ -1,0 +1,42 @@
+.readblog-main-container {
+  width: 75vw;
+  margin: 0 auto;
+  padding: 2vw;
+  text-align: center;
+  background-color: blanchedalmond;
+  height: fit-content;
+}
+.readblog-img-container {
+  width: 75vw;
+  height: fit-content;
+}
+.readblog-img {
+  width: 40vw;
+  height: 25vw;
+}
+.readblog-title {
+  font-size: 3vw;
+  font-family: "Mate SC", serif;
+  font-weight: 100;
+  text-decoration: solid;
+}
+.readblog-subtitle {
+  margin-top: 2vw;
+  text-align: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.readblog-topics {
+  margin-top: 1vw;
+  text-align: left;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 1000;
+  font-size: 1.5vw;
+}
+.readblog-date {
+  color: gray;
+  font-size: 1vw;
+}
+.readblog-description {
+  margin-top: 2vw;
+  text-align: justify;
+}

@@ -1,0 +1,47 @@
+.portfolio-element {
+  height: 20vw;
+  width: 70vw;
+  margin: 1px;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  background-color: bisque;
+
+  display: flex;
+  flex-direction: row;
+}
+.portfolio-element-text-container {
+  width: 40vw;
+  height: 15vw;
+  margin: 2.5vw;
+}
+
+.portfolio-element-img-container {
+  width: 12vw;
+  height: 12vw;
+  margin: 4vw;
+
+  background-color: black;
+}
+.portfolio-element-name {
+  margin: 1vw;
+  font-weight: 600;
+  font-size: 2.5vw;
+}
+.portfolio-element-role {
+  font-size: 1.5vw;
+  margin: 1vw;
+}
+.portfolio-element-viewlink {
+  font-size: 1.1vw;
+  margin: 1vw;
+  margin-top: 2vw;
+  margin-left: 3vw;
+}
+.view-text-portfolio {
+  text-decoration: none;
+}
+
+.view-text-portfolio:hover {
+  text-decoration: underline;
+  font-size: 1.2vw;
+}

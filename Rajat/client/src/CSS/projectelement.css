@@ -1,0 +1,63 @@
+.project-main-element {
+  height: 20vw;
+  width: 80vw;
+  margin: 1px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: row;
+}
+.project-main-element-text-container {
+  width: 50vw;
+  height: 15vw;
+
+  margin: 2vw;
+  margin-top: 3vw;
+}
+
+.project-main-element-img-container {
+  width: 50vw;
+  height: 20vw;
+}
+.project-logo-img {
+  width: 12vw;
+  height: 12vw;
+  margin: 3vw;
+}
+.project-main-element-name {
+  margin: 1vw;
+  font-weight: 600;
+  font-size: 2.5vw;
+  text-align: left;
+}
+.project-main-element-type {
+  font-size: 1vw;
+  margin-left: 1vw;
+  font-weight: 600;
+  text-align: left;
+}
+
+.project-main-element-viewlink {
+  font-size: 1vw;
+  text-align: left;
+  margin-left: 3vw;
+}
+.view-text-project-main {
+  text-decoration: none;
+}
+
+.view-text-project-main:hover {
+  text-decoration: underline;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.remove-text-project-main {
+  text-decoration: none;
+  color: red;
+}
+
+.remove-text-project-main:hover {
+  text-decoration: underline;
+  font-size: 1.2vw;
+  cursor: pointer;
+}

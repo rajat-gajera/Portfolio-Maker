@@ -1,0 +1,48 @@
+.navsticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.App {
+  overflow: auto;
+  position: relative;
+  height: 100vw;
+  width: 100vw;
+
+  /* // background-color: rgba(197, 122, 122, 0.11); */
+}
+
+.scroll {
+  overflow: auto;
+}
+/* .nav {
+  background-color: rgba(197, 122, 122, 0.11);
+  color: rgba(197, 122, 122, 0.11);
+} */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  background: linear-gradient(
+    -45deg,
+    #23d5ab6c,
+    #ee765267,
+    #e73c7e71,
+    #23a5d565
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  height: fit-content;
+}

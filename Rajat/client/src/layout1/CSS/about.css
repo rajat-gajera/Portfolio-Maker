@@ -1,0 +1,67 @@
+.sl-main-container {
+  background-size: 100vw;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  text-emphasis-color: white;
+  color: white;
+  background-image: url("../images/pexels-pixabay-247676.jpg");
+  height: 100vw;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+.sl-home-container {
+  width: 60vw;
+  height: 100vw;
+  position: relative;
+}
+@media only screen and (max-width: 991px) {
+  .sl-home-container {
+    margin-top: 25vw;
+  }
+}
+.sl-home {
+  position: absolute;
+  width: 60vw;
+  height: 100vw;
+  padding-top: 10vw;
+  padding-left: 5vw;
+}
+@media only screen and (max-width: 991px) {
+  .sl-home {
+    padding-top: 25vw;
+  }
+}
+
+.sl-quate {
+  font-size: 4vw;
+  font-weight: 600;
+}
+.sl-abt-img-container {
+  width: 40vw;
+  height: 40vw;
+  padding: 5vw;
+  padding-top: 7vw;
+  height: 100vw;
+  margin-left: 60vw;
+}
+@media only screen and (max-width: 991px) {
+  .sl-abt-img-container {
+    padding-top: 25vw;
+    animation-duration: 4s;
+    height: 100vw;
+  }
+}
+.sl-abt-img {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 5px;
+}
+.sl-abt-imgg {
+  width: 30vw;
+  height: 30vw;
+}
+.sl-about-description {
+  font-size: 1.2vw;
+}

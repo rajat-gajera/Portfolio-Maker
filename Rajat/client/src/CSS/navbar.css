@@ -1,0 +1,53 @@
+.navbar {
+  color: black;
+}
+
+.nav-item {
+  color: black;
+}
+
+/* .container-fluid {
+  background: linear-gradient(
+    -45deg,
+    #23d5aba8,
+    #ee7652a1,
+    #e73c7eb6,
+    #23a5d5ad
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.navbar {
+  background: linear-gradient(
+    -45deg,
+    #23d5aba8,
+    #ee7652a1,
+    #e73c7eb6,
+    #23a5d5ad
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+} */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container-fluid {
+    background: linear-gradient(-45deg, #23d5ab, #ee7652, #e73c7e, #23a5d5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  .navbar {
+    background: linear-gradient(-45deg, #23d5ab, #ee7652, #e73c7e, #23a5d5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+}
