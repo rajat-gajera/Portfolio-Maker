@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import "../CSS/contact.css";
+import emailjs from "emailjs-com";
+import configData from "../.././config.json";
 
 const Contact = () => {
   const [portfolio, setPortfolio] = useState({});
   let { userid } = useParams();
+  const history = useHistory();
+  const [message, setMessage] = useState({ name: "", email: "", message: "" });
+  const updateData = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setMessage({ ...message, [name]: value });
+    // console.log(message);
+  };
   const getPortfolio = async () => {
     try {
       const url = "/portfolio/" + userid;
@@ -34,6 +44,38 @@ const Contact = () => {
   useEffect(() => {
     getPortfolio();
   }, []);
+  const handlesubmit = async (e) => {
+    e.preventDefault();
+    const templateId = configData.EMAILJS_TEMPID;
+    console.log(message.message);
+    await sendMessage(templateId, {
+      message_html: `${message.message}`,
+      from_name: message.name,
+      reply_to: message.email,
+      to_email: portfolio.email,
+      to_name: portfolio.name,
+    });
+  };
+  const sendMessage = (templateId, variables) => {
+    const userid = configData.EMAILJS_USERID;
+    const serviceid = configData.EMAILJS_SERVICEID;
+
+    // console.log(userid + serviceid);
+    emailjs
+      .send(serviceid, templateId, variables, userid)
+      .then((res) => {
+        console.log("Email successfully sent!");
+        window.alert("Message Successfully Sent!");
+        window.location.reload();
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch((err) =>
+        console.error(
+          "Oh well, you failed. Here some thoughts on the error that occured:",
+          err
+        )
+      );
+  };
   return (
     <>
       <div className="sl-main-container">
@@ -41,7 +83,7 @@ const Contact = () => {
           <div className="sl-home">
             <p className="sl-quate">Let's talk.</p>
             <p className="sl-description">
-              <p>Hi, I'm Rajat.</p>
+              <p>Hi, I'm {portfolio.name}.</p>
               <p>
                 Get in touch via the form below, or by emailing
                 <span className="sl-mail"> {portfolio.email}</span>
@@ -53,8 +95,8 @@ const Contact = () => {
                   className="sl-contact-input"
                   type="text"
                   name="name"
-                  //   value={email}
-                  //   onChange={(e) => setEmail(e.target.value)}
+                  value={message.name}
+                  onChange={updateData}
                   autoComplete="off"
                   placeholder="Enter your name"
                 />
@@ -64,8 +106,8 @@ const Contact = () => {
                   className="sl-contact-input"
                   type="text"
                   name="email"
-                  //   value={email}
-                  //   onChange={(e) => setEmail(e.target.value)}
+                  value={message.email}
+                  onChange={updateData}
                   autoComplete="off"
                   placeholder="Enter yout email address"
                 />
@@ -75,8 +117,8 @@ const Contact = () => {
                   className="sl-contact-input-text-area"
                   type="text-area"
                   name="message"
-                  //   value={email}
-                  //   onChange={(e) => setEmail(e.target.value)}
+                  value={message.message}
+                  onChange={updateData}
                   autoComplete="off"
                   placeholder="Enter yout message"
                 />
@@ -87,6 +129,7 @@ const Contact = () => {
                   value="Submit"
                   data-wait="Please wait..."
                   className="sl-form-submit "
+                  onClick={handlesubmit}
                 />
               </div>
             </form>
