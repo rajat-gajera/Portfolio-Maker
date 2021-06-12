@@ -1,21 +1,15 @@
 import "./App.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import Maker from "./components/Maker";
 import Layout1 from "./layout1/Layout1";
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect, createContext } from "react";
 import ReadBlog from "./components/ReadBlog";
-// import About from "./components/About";
-// import Writing from "./components/Writing";
-// import Contact from "./components/Contact";
-// import Work from "./components/Work";
-function App() {
-  const history = useHistory();
-  // console.log(history.location.pathname);
-  // if (history.location.pathname === "/silverport") return <Layout1 />;
-  // else
 
+export const USerContext = createContext();
+
+function App() {
   return (
     <Switch>
       <Route exact path="/">

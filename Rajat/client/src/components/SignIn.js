@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import "../CSS/sigin.css";
+import { UserContext } from "./Maker";
 const SignIn = () => {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { state, dispatch } = useContext(UserContext);
+
   const postData = async (event) => {
     event.preventDefault();
     if (!email || !password) {
@@ -27,6 +30,8 @@ const SignIn = () => {
       const jdata = JSON.stringify(ddata);
       const data = JSON.parse(jdata);
       if (result.status === 201) {
+        dispatch({ type: "USER", payload: true });
+
         window.alert(data.message);
         history.push("/home");
       } else {

@@ -43,7 +43,6 @@ router.post("/signup", authenticate, async (req, res) => {
   }
 });
 
-
 //Sign In Router----------------------
 router.post("/signin", async (req, res) => {
   console.log("REesuested");
@@ -76,7 +75,9 @@ router.post("/signin", async (req, res) => {
     res.status(500).json({ error: "Faild to Sign in!" });
   }
 });
-
- 
+router.get("/signout", (req, res) => {
+  res.clearCookie("jwttoken", { path: "/" });
+  res.status(200).send({ message: "Signed out successfully!" });
+});
 
 module.exports = router;

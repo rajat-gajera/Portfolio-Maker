@@ -42,8 +42,8 @@ const Home = () => {
         <h1 className="home-title-mainsite">Let's Make Your Portfolio</h1>
       </div>
       <div className="main-port-conatainer">
-        {portfolios.map((portfolio) => {
-          return <PortfolioElement />;
+        {portfolios.map((port) => {
+          return <PortfolioElement portfolio={port} />;
         })}
       </div>
     </div>
